@@ -5,48 +5,56 @@
 const welcomeText = "Guess the movie with emojis"
 alert(welcomeText);
 
-const moviesList = {
+const moviesList = [
+    {
     title: "Jurassic Park",
-    hint: "🦖🌎🔬🧬", 
-    
+    hint: "🦖🌎🔬🧬"
+    },
+    {
     title: "Ratatouille" ,
-    hint: "🐀🍝👨🏻‍🍳",
-    
+    hint: "🐀🍝👨🏻‍🍳"
+    },
+    {
     title: "It",
-    hint: "🎈🤡", 
-    
+    hint: "🎈🤡" 
+    },
+    {
     title: "Forrest Gump",
-    hint: "🏃‍♂️🏓🪖🍫",
-    
+    hint: "🏃‍♂️🏓🪖🍫"
+    },
+    {
     title: "The Lion King",
-    hint: "🐯👑🐗", 
-    
+    hint: "🦁👑🐗" 
+    },
+    {
     title: "Home Alone",
-    hint: "🧍🏼‍♂️❄️🎄🏠", 
-    
+    hint: "🧍🏼‍♂️❄️🎄🏠" 
+    },
+    {
     title: "Titanic",
-    hint: "🪨❤️🚢",
-    
+    hint: "🪨❤️🚢"
+    },
+    {
     title: "Harry Potter",
-    hint: "🏰🤓⚡️", 
-    
+    hint: "🏰🤓⚡️"
+    },
+    {
     title: "Batman",
-    hint: "🦇🤡", 
-    
+    hint: "🦇🤡"
+    },
+    {
     title: "Lord of the Rings",
     hint: "🧙‍♂️💍🌋"
-};
-
+    }
+];
 // random movie
+const randomMovie = Math.floor(Math.random) * 10;
+console
 
-// show emojis
+// choose movie
+const currentMovie = moviesList[randomMovie];
 
-// wait for guess
-
-// compare guess
-
-// show message
-
-// update scene
-
-// play again
+// get hint
+currentMovie.hint
+// answer?
+currentMovie.title
