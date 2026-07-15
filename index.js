@@ -54,16 +54,24 @@ const randomIndex = Math.floor(Math.random() * 10)
 
 const currentMovie = moviesList[randomIndex];
 
-alert(currentMovie.hint);
 
+// choose movie and get hint
 
-// choose movie and get hiny
+let attempts = 3;
 
-const userGuess = prompt("What movie is this?" + currentMovie.hint);
+while (attempts > 0) {
+
+    const userGuess = prompt("What movie is this?" + currentMovie.hint);
 
     if(userGuess === currentMovie.title){
         alert("You are the winner!");
+        break;
     } else {
-    alert("Wrong");
+        attempts --;
+        alert("Nope! attempts left: " + attempts);
+    } if (attempts === 0) {
+        alert("Game over! The movie was " + currentMovie.title);
+    }
 }
 
+const attemptsDisplay = document.getElementById("attemptsDisplay");
