@@ -7,44 +7,44 @@ alert(welcomeText);
 
 const moviesList = [
     {
-    title: "jurassic park",
-    hint: "🦖🌎🔬🧬"
+        title: "jurassic park",
+        hint: "🦖🌎🔬🧬"
     },
     {
-    title: "ratatouille" ,
-    hint: "🐀🍝👨🏻‍🍳"
+        title: "ratatouille",
+        hint: "🐀🍝👨🏻‍🍳"
     },
     {
-    title: "it",
-    hint: "🎈🤡" 
+        title: "it",
+        hint: "🎈🤡"
     },
     {
-    title: "forrest gump",
-    hint: "🏃‍♂️🏓🪖🍫"
+        title: "forrest gump",
+        hint: "🏃‍♂️🏓🪖🍫"
     },
     {
-    title: "the lion king",
-    hint: "🦁👑🐗" 
+        title: "the lion king",
+        hint: "🦁👑🐗"
     },
     {
-    title: "home alone",
-    hint: "🧍🏼‍♂️❄️🎄🏠" 
+        title: "home alone",
+        hint: "🧍🏼‍♂️❄️🎄🏠"
     },
     {
-    title: "titanic",
-    hint: "🪨❤️🚢"
+        title: "titanic",
+        hint: "🪨❤️🚢"
     },
     {
-    title: "harry potter",
-    hint: "🏰🤓⚡️"
+        title: "harry potter",
+        hint: "🏰🤓⚡️"
     },
     {
-    title: "batman",
-    hint: "🦇🤡"
+        title: "batman",
+        hint: "🦇🤡"
     },
     {
-    title: "lord of the rings",
-    hint: "🧙‍♂️💍🌋"
+        title: "lord of the rings",
+        hint: "🧙‍♂️💍🌋"
     }
 ];
 
@@ -68,21 +68,21 @@ let attempts = 3;
 
 while (attempts > 0) {
 
-    const userGuess = prompt("What movie is this?");
+    const userGuess = prompt("What movie is this?" + currentMovie.hint);
 
-    if(userGuess === currentMovie.title){
+    if (userGuess === currentMovie.title) {
         gameMessage.textContent = "You are the winner";
         break;
     } else {
-        attempts --;
+        attempts--;
 
         attemptsDisplay.textContent = "❤️".repeat(attempts);
 
         alert("Nope! attempts left: " + attempts);
     }
 }
-     if (attempts === 0) {
-        gameMessage.textContent = "Game over; the movie was: " = currentMovie/title;
-    }
+if (attempts === 0) {
+    gameMessage.textContent = "Game over; the movie was: " + currentMovie.title;
+}
 
-    
+
