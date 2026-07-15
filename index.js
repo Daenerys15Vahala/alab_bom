@@ -7,54 +7,63 @@ alert(welcomeText);
 
 const moviesList = [
     {
-    title: "Jurassic Park",
+    title: "jurassic park",
     hint: "🦖🌎🔬🧬"
     },
     {
-    title: "Ratatouille" ,
+    title: "ratatouille" ,
     hint: "🐀🍝👨🏻‍🍳"
     },
     {
-    title: "It",
+    title: "it",
     hint: "🎈🤡" 
     },
     {
-    title: "Forrest Gump",
+    title: "forrest gump",
     hint: "🏃‍♂️🏓🪖🍫"
     },
     {
-    title: "The Lion King",
+    title: "the lion king",
     hint: "🦁👑🐗" 
     },
     {
-    title: "Home Alone",
+    title: "home alone",
     hint: "🧍🏼‍♂️❄️🎄🏠" 
     },
     {
-    title: "Titanic",
+    title: "titanic",
     hint: "🪨❤️🚢"
     },
     {
-    title: "Harry Potter",
+    title: "harry potter",
     hint: "🏰🤓⚡️"
     },
     {
-    title: "Batman",
+    title: "batman",
     hint: "🦇🤡"
     },
     {
-    title: "Lord of the Rings",
+    title: "lord of the rings",
     hint: "🧙‍♂️💍🌋"
     }
 ];
+
 // random movie
-const randomMovie = Math.floor(Math.random) * 10;
-console
+const randomIndex = Math.floor(Math.random() * 10)
 
-// choose movie
-const currentMovie = moviesList[randomMovie];
 
-// get hint
-currentMovie.hint
-// answer?
-currentMovie.title
+const currentMovie = moviesList[randomIndex];
+
+alert(currentMovie.hint);
+
+
+// choose movie and get hiny
+
+const userGuess = prompt("What movie is this?" + currentMovie.hint);
+
+    if(userGuess === currentMovie.title){
+        alert("You are the winner!");
+    } else {
+    alert("Wrong");
+}
+
