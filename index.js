@@ -53,26 +53,36 @@ const randomIndex = Math.floor(Math.random() * 10)
 
 const currentMovie = moviesList[randomIndex];
 
+// dom
+const attemptsDisplay = document.getElementById("attemptsDisplay");
+const hintDisplay = document.getElementById("hintDisplay");
+const gameMessage = document.getElementById("gameMessage");
+
+
+hintDisplay.textContent = "Guess the movie: " + currentMovie.hint;
+
 
 // choose movie and get hint
-
-const attemptsDisplay = document.getElementById("attemptsDisplay");
 
 let attempts = 3;
 
 while (attempts > 0) {
 
-    const userGuess = prompt("What movie is this?" + currentMovie.hint);
+    const userGuess = prompt("What movie is this?");
 
     if(userGuess === currentMovie.title){
-        alert("You are the winner!");
+        gameMessage.textContent = "You are the winner";
         break;
     } else {
         attempts --;
 
         attemptsDisplay.textContent = "❤️".repeat(attempts);
+
         alert("Nope! attempts left: " + attempts);
-    } if (attempts === 0) {
-        alert("Game over! The movie was " + currentMovie.title);
     }
 }
+     if (attempts === 0) {
+        gameMessage.textContent = "Game over; the movie was: " = currentMovie/title;
+    }
+
+    
